@@ -238,3 +238,14 @@ if (footerForm) {
         }
     });
 }
+
+
+const toggleButtons = document.querySelectorAll(".toggle-btn");
+toggleButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".category-card");
+    card.classList.toggle("active");
+  });
+});
+
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Fernando Manholér</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f9ff;
+  color: #374151;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.about-header {
+  background: linear-gradient(135deg,#0d47a1,#1e88e5);
+  color: #fff;
+  padding: 120px 20px 80px;
+  text-align: center;
+}
+.about-header h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.about-header h1 span {
+  font-weight: 600;
+}
+.about-header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.2s;
+}
+
+/* SEÇÕES */
+.section {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.section h2 {
+  font-size: 2em;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.section h2 span {
+  color: #1e88e5;
+}
+.section p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: #374151;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* CONQUISTAS */
+.achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.achievement-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.achievement-card h3 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+.achievement-card p {
+  color: #374151;
+  font-size: 0.95em;
+}
+
+/* GALERIA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .achievements {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<section class="about-header">
+  <h1>Conheça <span>Fernando Manholér</span></h1>
+  <p>Empresário visionário, líder e inspirador, projetando o futuro do Brasil.</p>
+</section>
+
+<!-- BIOGRAFIA -->
+<section class="section">
+  <h2>Biografia</h2>
+  <p>Fernando Manholér é um empresário brasileiro com décadas de experiência em inovação e negócios. Desde jovem, sempre demonstrou uma visão estratégica e capacidade de transformar ideias em projetos concretos que impactam positivamente a sociedade e a economia do país.</p>
+  <p>Ao longo de sua carreira, Fernando se destacou por sua ética, liderança e compromisso com o desenvolvimento sustentável, tornando-se referência em empreendedorismo e planejamento estratégico.</p>
+</section>
+
+<!-- CONQUISTAS -->
+<section class="section">
+  <h2>Conquistas e Carreira</h2>
+  <div class="achievements">
+    <div class="achievement-card">
+      <h3>Fundador de Empresas</h3>
+      <p>Fundou e liderou diversas empresas de sucesso, gerando empregos e oportunidades em diferentes setores.</p>
+    </div>
+    <div class="achievement-card">
+      <h3>Projetos de Inovação</h3>
+      <p>Desenvolveu soluções inovadoras que transformaram mercados e impactaram positivamente a sociedade.</p>
+    </div>
+    <div class="achievement-card">
+      <h3>Reconhecimento Nacional</h3>
+      <p>Recebeu prêmios e menções em veículos de mídia renomados, destacando sua liderança e visão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISÃO E MISSÃO -->
+<section class="section">
+  <h2>Visão e Missão</h2>
+  <p>Fernando acredita em um Brasil mais justo, inovador e competitivo. Sua missão é implementar estratégias que conectem tecnologia, educação e desenvolvimento econômico, criando oportunidades para todos.</p>
+  <p>Sua visão é tornar o país referência em inovação, sustentabilidade e crescimento, inspirando novas gerações de líderes e empreendedores.</p>
+</section>
+
+<!-- GALERIA -->
+<section class="section">
+  <h2>Galeria</h2>
+  <div class="gallery">
+    <img src="imagens/banners/a.jpg" alt="Fernando Manholér 1">
+    <img src="imagens/banners/b.jpeg" alt="Fernando Manholér 2">
+    <img src="imagens/banners/c.jpg" alt="Fernando Manholér 3">
+    <img src="imagens/banners/d.jpg" alt="Fernando Manholér 4">
+  </div>
+</section>
+
+<script>
+// Função para animar elementos quando entram na viewport
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.2});
+
+// Seleciona todos elementos animáveis
+const animatables = document.querySelectorAll('.section, .achievement-card, .about-header h1, .about-header p, .gallery img');
+animatables.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

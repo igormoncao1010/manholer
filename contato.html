@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato - Fernando Manholér</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f9ff;
+  color: #374151;
+}
+
+/* HEADER */
+.contact-header {
+  background: #0d47a1;
+  color: #fff;
+  padding: 80px 20px 50px;
+  text-align: center;
+}
+.contact-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.contact-header h1 span {
+  color: #1e88e5;
+}
+.contact-header p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* FORMULARIO */
+.contact-container {
+  max-width: 1200px;
+  margin: -50px auto 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.contact-form h2 {
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1em;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 5px rgba(30,136,229,0.3);
+  outline: none;
+}
+
+.contact-form button {
+  background: #1e88e5;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0d47a1;
+}
+
+/* INFO ADICIONAL */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-info h3 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* MAPA */
+.map-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 14px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<section class="contact-header">
+  <h1>Entre em contato com <span>Fernando Manholér</span></h1>
+  <p>Preencha o formulário abaixo e envie sua mensagem diretamente para o WhatsApp.</p>
+</section>
+
+<!-- FORMULARIO + INFO -->
+<section class="contact-container">
+  <!-- FORMULÁRIO -->
+  <form id="contactForm" class="contact-form">
+    <h2>Formulário de Contato</h2>
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <input type="text" name="assunto" placeholder="Assunto" required>
+    <textarea name="mensagem" placeholder="Sua mensagem" rows="6" required></textarea>
+    <button type="submit">Enviar pelo WhatsApp</button>
+  </form>
+
+  <!-- INFORMAÇÕES ADICIONAIS -->
+  <div class="contact-info">
+    <h3>Informações de Contato</h3>
+    <p><strong>Telefone:</strong> <a href="https://wa.me/5561996067198" target="_blank">+55 61 99606-7198</a></p>
+    <p><strong>E-mail:</strong> contato@fernandomanholer.com.br</p>
+    <p><strong>Endereço:</strong> Brasília - DF, Brasil</p>
+  </div>
+</section>
+
+<!-- MAPA -->
+<div class="map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.123456!2d-47.8825!3d-15.7942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2c123456789%3A0xabcdef123456!2sBras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1698800000000" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<script>
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const nome = form.nome.value;
+  const email = form.email.value;
+  const assunto = form.assunto.value;
+  const mensagem = form.mensagem.value;
+
+  const whatsappMessage = `*Mensagem de Contato*\n*Nome:* ${nome}\n*Email:* ${email}\n*Assunto:* ${assunto}\n*Mensagem:* ${mensagem}`;
+
+  const whatsappNumber = "5561996067198"; // WhatsApp com código do Brasil
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappURL, "_blank");
+});
+</script>
+
+</body>
+</html>
